@@ -1,6 +1,6 @@
 # Goalprize Admin — Playwright test dashboard
 
-Piwi-style testing dashboard for Goalprize Admin.
+Operations-style console for Goalprize Admin login and core checks (client demo).
 
 ## Local
 
@@ -9,10 +9,10 @@ npm install
 npm run dev
 ```
 
-- Dashboard: http://localhost:3010/dashboard  
-- Click **Run tests** to execute the login + core suite in the UI  
+- Console: http://localhost:3010/
+- Click **Run suite** to stream the admin login → 2FA → statistics flow
 
-## Suite (4 cases)
+## Suite (4 checks)
 
 1. Login — admin sign-in page loads  
 2. Login — required fields validation  

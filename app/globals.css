@@ -1,37 +1,7 @@
 @import "tailwindcss";
 
-:root {
-  --background: #f3efe6;
-  --foreground: #1c2420;
-  --panel: #fffdf8;
-  --ink-muted: #5b675f;
-  --line: #d7d0c3;
-  --accent: #0f6b4c;
-  --accent-hover: #0c563d;
-  --danger: #e85d6c;
-  --ok: #3ecf8e;
-  --warn: #f5a524;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-panel: var(--panel);
-  --color-ink-muted: var(--ink-muted);
-  --color-line: var(--line);
-  --color-accent: var(--accent);
-  --color-accent-hover: var(--accent-hover);
-  --color-danger: var(--danger);
-  --color-ok: var(--ok);
-  --color-warn: var(--warn);
   --font-sans: var(--font-body);
-  --font-display: var(--font-display);
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  min-height: 100vh;
 }
 
 a {
@@ -39,20 +9,23 @@ a {
   text-decoration: none;
 }
 
-/* Piwi-like testing dashboard shell */
 .qa-shell {
-  --qa-bg: #0b0c0e;
-  --qa-panel: #12141a;
-  --qa-panel-2: #181b22;
-  --qa-border: #2a2f3a;
-  --qa-text: #e8eaef;
-  --qa-muted: #8b93a7;
-  --qa-link: #a78bfa;
-  --qa-run: #f5a524;
-  --qa-pass: #3ecf8e;
-  --qa-fail: #f07178;
-  --qa-idle: #6b7280;
-  background: var(--qa-bg);
+  --qa-bg: #0c0f14;
+  --qa-panel: #12171f;
+  --qa-panel-2: #181e28;
+  --qa-border: #273041;
+  --qa-text: #e7ecf3;
+  --qa-muted: #8b97ab;
+  --qa-link: #7dd3fc;
+  --qa-run: #38bdf8;
+  --qa-pass: #34d399;
+  --qa-fail: #fb7185;
+  --qa-idle: #64748b;
+  --qa-accent: #0ea5e9;
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(14, 165, 233, 0.08), transparent 55%),
+    radial-gradient(900px 500px at 100% 0%, rgba(52, 211, 153, 0.05), transparent 50%),
+    var(--qa-bg);
   color: var(--qa-text);
   min-height: 100vh;
   font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
@@ -60,4 +33,25 @@ a {
 
 .qa-shell a:hover {
   color: var(--qa-link);
+}
+
+body {
+  margin: 0;
+  background: #0c0f14;
+  color: #e7ecf3;
+  min-height: 100vh;
+}
+
+@keyframes qa-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.45;
+  }
+}
+
+.qa-pulse {
+  animation: qa-pulse 1.4s ease-in-out infinite;
 }

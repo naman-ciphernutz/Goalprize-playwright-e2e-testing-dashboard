@@ -5,30 +5,33 @@ export type CatalogTest = {
   description: string;
 };
 
-/** Goalprize Admin — login + core features shown in the dashboard. */
 export const TEST_CATALOG: CatalogTest[] = [
   {
     id: "admin-login-page",
     title: "Login — admin sign-in page loads",
     file: "tests/admin/login.spec.ts",
-    description: "Opens Goalprize Admin and verifies the sign-in form.",
+    description:
+      "Opens admin-staging, lands on /login, verifies GoalPrize Admin form and Sign in.",
   },
   {
     id: "admin-login-validation",
     title: "Login — required fields validation",
     file: "tests/admin/login.spec.ts",
-    description: "Empty Sign in shows the required-fields error.",
+    description:
+      "Empty Sign in shows “Please fill up all required fields” without calling the API.",
   },
   {
     id: "admin-login-success",
     title: "Login — valid admin credentials",
     file: "tests/admin/login.spec.ts",
-    description: "Signs in with admin credentials and reaches post-login flow.",
+    description:
+      "POST /auth/admin/login, stores auth-token, navigates to /2fa-setup.",
   },
   {
     id: "admin-dashboard-core",
     title: "Core — statistics dashboard loads",
     file: "tests/admin/core.spec.ts",
-    description: "After login, the admin statistics dashboard is available.",
+    description:
+      "Loads /dashboard/statistics with Today / Weekly / Monthly controls.",
   },
 ];

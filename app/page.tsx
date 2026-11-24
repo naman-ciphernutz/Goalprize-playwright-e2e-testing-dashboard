@@ -396,8 +396,8 @@ export default function DashboardPage() {
             </div>
           </div>
 
-          <div className="flex min-h-[420px] flex-col rounded-xl border border-[var(--qa-border)] bg-[#080b10]">
-            <div className="flex items-center justify-between border-b border-[var(--qa-border)] px-4 py-3">
+          <div className="flex h-[min(520px,70vh)] flex-col overflow-hidden rounded-xl border border-[var(--qa-border)] bg-[#080b10]">
+            <div className="flex shrink-0 items-center justify-between border-b border-[var(--qa-border)] px-4 py-3">
               <p className="text-xs font-medium uppercase tracking-[0.14em] text-[var(--qa-muted)]">
                 Execution log
               </p>
@@ -409,7 +409,7 @@ export default function DashboardPage() {
             </div>
             <div
               ref={logRef}
-              className="flex-1 space-y-1 overflow-y-auto px-4 py-3 font-mono text-[12px] leading-5 text-[#b7c2d2]"
+              className="qa-scroll min-h-0 flex-1 space-y-1 overflow-y-auto px-4 py-3 font-mono text-[12px] leading-5 text-[#b7c2d2]"
             >
               {run.steps.length === 0 ? (
                 <p className="text-[var(--qa-muted)]">

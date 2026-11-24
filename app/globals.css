@@ -55,3 +55,36 @@ body {
 .qa-pulse {
   animation: qa-pulse 1.4s ease-in-out infinite;
 }
+
+/* Thin scrollbar matching the dark console */
+.qa-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #2a3548 transparent;
+}
+
+.qa-scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.qa-scroll::-webkit-scrollbar-track {
+  background: transparent;
+  margin-block: 4px;
+}
+
+.qa-scroll::-webkit-scrollbar-thumb {
+  background: #2a3548;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.qa-scroll::-webkit-scrollbar-thumb:hover {
+  background: #3a4a63;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.qa-scroll::-webkit-scrollbar-corner {
+  background: transparent;
+}
